@@ -1,0 +1,18 @@
+Start testing: Sep 05 14:37 CEST
+----------------------------------------------------------
+1/1 Testing: crypto_test
+1/1 Test: crypto_test
+Command: "/home/arild/Documents/GitHub/openssl-example/tests/crypto_test"
+Directory: /home/arild/Documents/GitHub/openssl-example/tests
+"crypto_test" start time: Sep 05 14:37 CEST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"crypto_test" end time: Sep 05 14:37 CEST
+"crypto_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 05 14:37 CEST

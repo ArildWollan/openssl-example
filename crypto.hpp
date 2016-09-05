@@ -1,7 +1,9 @@
 #include <openssl/evp.h>
 #include <openssl/sha.h>
+#include <openssl/md5.h>
 #include <sstream>
 #include <iomanip>
+#include <string.h>
 #include <string>
 
 // Note: C-style casts, for instance (int), are used to simplify the source code.
@@ -22,7 +24,20 @@ public:
 
   /// Return the MD5 (128-bit) hash from input.
   static std::string md5(const std::string &input, size_t iterations = 1) {
-    throw std::logic_error("not yet implemented");
+
+    unsigned char digest[MD5_DIGEST_LENGTH];
+    char string[1024];
+    strcpy(string, input.c_str());
+
+    MD5((unsigned char *)&string, strlen(string), (unsigned char *)&digest);
+
+    char mdString[33];
+
+    for (int i = 0; i < 16; i++) {
+      sprintf(&mdString[i * 2], "%02x", (unsigned int)digest[i]);
+    }
+    
+    return (mdString);
   }
 
   /// Return the SHA-1 (160-bit) hash from input.

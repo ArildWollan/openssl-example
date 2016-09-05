@@ -4,6 +4,10 @@
 using namespace std;
 
 int main() {
+  
+  cout << "MD5" << endl;
+  cout << Crypto::md5("Test", 1) << endl << endl;
+  
   cout << "SHA-1 with 1 iteration" << endl;
   cout << Crypto::hex(Crypto::sha1("Test")) << endl << endl;
   
