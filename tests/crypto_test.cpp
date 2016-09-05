@@ -6,14 +6,14 @@ using namespace std;
 int main() {
   
   // Results copied from http://www.xorbin.com/tools/md5-hash-calculator
-  assert(Crypto::md5("Test") == "0cbc6611f5540bd0809a388dc95a615b");
+  assert(Crypto::hex(Crypto::md5("Test")) == "0cbc6611f5540bd0809a388dc95a615b");
 
   // Results copied from http://www.xorbin.com/tools/sha256-hash-calculator
-  assert(Crypto::sha256("Test") == "532eaabd9574880dbf76b9b8cc00832c20a6ec113d682299550d7a6e0f345e25");
+  assert(Crypto::hex(Crypto::sha256("Test")) == "532eaabd9574880dbf76b9b8cc00832c20a6ec113d682299550d7a6e0f345e25");
   
   
   // Results copied from http://www.timestampgenerator.com/tools/sha512-generator/
-  assert(Crypto::sha512("Test") == "c6ee9e33cf5c6715a1d148fd73f7318884b41adcb916021e2bc0e800a5c5dd97f5142178f6ae88c8fdd98e1afb0ce4c8d2c54b5f37b30b7da1997bb33b0b8a31");
+  assert(Crypto::hex(Crypto::sha512("Test")) == "c6ee9e33cf5c6715a1d148fd73f7318884b41adcb916021e2bc0e800a5c5dd97f5142178f6ae88c8fdd98e1afb0ce4c8d2c54b5f37b30b7da1997bb33b0b8a31");
   
   
   
